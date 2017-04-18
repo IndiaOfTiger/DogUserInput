@@ -219,8 +219,8 @@ $(function () {
 
       google.maps.event.addListener(map, 'click', function(event) {
           var LatLng = event.latLng;
-          var lat = LatLng.lat();
-          var lng = LatLng.lng();
+          var lat = LatLng.lat().toPrecision(12);
+          var lng = LatLng.lng().toPrecision(12);
           latDom.text(lat);
           lngDom.text(lng);
       })
